@@ -9,6 +9,8 @@ app.use(cors());
 
 const userRouter = require('./Routers/user.router');
 app.use('/users', userRouter);
+const companyRouter = require('./Models/company.model');
+app.use('/company', companyRouter);
 
 
 mongoose.connect(process.env.CONNECTION_STRING , {
