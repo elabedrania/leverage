@@ -19,6 +19,7 @@ const companySchema = mongoose.Schema({
     contactNumber : String,
     contactPerson : String,
     taxCardNumber : String,
+    
 })
 
-module.exports = mongoose.model('company', companySchema);
+module.exports = mongoose.model('companies', companySchema);

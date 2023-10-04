@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Company = require('./company.model');
 
 const userSchema = mongoose.Schema({
     firstName : String,
@@ -12,7 +13,8 @@ const userSchema = mongoose.Schema({
         enum : ['admin', 'user'],
         default : 'user'
     },
-    birthDate : String
+    birthDate : String,
+    
 })
 
 module.exports = mongoose.model('users', userSchema);
