@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Company = require('./company.model');
+
 
 const userSchema = mongoose.Schema({
     firstName : String,

@@ -1,12 +1,7 @@
 const mongoose = require('mongoose');
-const userModel = require('./user.model');
-
+const objectId = require('mongodb').ObjectId;
 const companySchema = mongoose.Schema({
     companyName : String,
-    user : {
-        type : mongoose.Schema.Types.ObjectId,
-        ref : 'users'
-    },
     description : String,
     commercialRegistrationNumber : String,
     email : String,
@@ -19,7 +14,7 @@ const companySchema = mongoose.Schema({
     contactNumber : String,
     contactPerson : String,
     taxCardNumber : String,
-    
+    idUser : objectId
 })
 
 module.exports = mongoose.model('companies', companySchema);
